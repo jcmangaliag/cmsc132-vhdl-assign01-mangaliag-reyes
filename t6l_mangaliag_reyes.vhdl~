@@ -7,6 +7,6 @@ end buzzer;
 	
 architecture behavior of buzzer is
 begin
-	alarm <= (inBoggis and outBoggis) or (inBoggis and outBunce) or (inBoggis and outBean) or (inBunce and outBoggis) or (inBunce and outBunce) or (inBunce and outBean) or (inBean and outBoggis) or (inBean and outBunce) or (inBean and outBean);
+	alarm <= (inBoggis and outBunce) or (inBoggis and outBean) or (inBunce and outBoggis) or (inBunce and outBunce) or (inBunce and outBean) or (inBean and outBoggis) or (inBean and outBunce) or (inBean and outBean);
 
 end behavior;    
