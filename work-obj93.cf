@@ -1,4 +1,7 @@
 v 3
-file . "t6l_mangaliag_reyes.vhdl" "20160323084948.000" "20160323165023.089":
-  entity buzzer at 1( 0) + 0 on 11;
-  architecture behavior of buzzer at 8( 176) + 0 on 12;
+file . "t6l_mangaliag_reyes_tb.vhdl" "20160323105854.000" "20160323185951.289":
+  entity buzzer_tb at 1( 0) + 0 on 29;
+  architecture behavior_buzzer_tb of buzzer_tb at 8( 138) + 0 on 30;
+file . "t6l_mangaliag_reyes.vhdl" "20160323105928.000" "20160323185948.489":
+  entity buzzer at 1( 0) + 0 on 27;
+  architecture behavior of buzzer at 8( 176) + 0 on 28;
