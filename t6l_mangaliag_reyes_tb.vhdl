@@ -1,3 +1,11 @@
+------------------------------------------------------------
+-- Mangaliag, Juan Carlo M.				2013-57273		   -
+-- Reyes, Anton-Renzo Benedict G.		2013-45594		   -
+-- March 23, 2016						T-6L			   -
+-- Alarm system for Mr.Fox's Farm	(Testbench File)	   -
+------------------------------------------------------------
+
+
 library IEEE; use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
@@ -24,16 +32,16 @@ architecture behavior_buzzer_tb of buzzer_tb is
 				for i in 0 to 63 loop -- (for i = 0; i <= 63; i++)
 					inputs := TO_UNSIGNED(i, 6); -- converts i to unsigned binary with 6 digits
 					
-					--assign a value from inputs to each buzzers
-					inBoggis <= inputs(5);
-					inBunce <= inputs(4);
-					inBean <= inputs(3);
-					outBoggis <= inputs(2);
-					outBunce <= inputs(1);
-					outBean <= inputs(0);
+					--Assign a value from inputs to each buzzers.
+					inBoggis  <=  inputs(5);
+					inBunce   <=  inputs(4);
+					inBean    <=  inputs(3);
+					outBoggis <=  inputs(2);
+					outBunce  <=  inputs(1);
+					outBean   <=  inputs(0);
 
 					if(i < 8 or (i mod 8) = 0) then 
-						expected := '0'; --maxterms of the boolean function are 0 - 7 and 8 16 24 32 40 48 56
+						expected := '0'; --Maxterms of the boolean function are 0 - 7 and 8 16 24 32 40 48 56
 					else 
 						expected := '1';
 					end if;
@@ -49,6 +57,8 @@ architecture behavior_buzzer_tb of buzzer_tb is
 				end loop;
 
 				wait for DELAY;
+				
+				--checks if there are any errors
 				assert (error_count = 0)
 					report "ERROR: There were " &
 						integer'image(error_count) & " errors!";
